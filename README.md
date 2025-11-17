@@ -1,16 +1,45 @@
-# React + Vite
+☕ Mugs Coffee — Modern Coffee Shop Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive, and modern coffee shop website built with React + Tailwind CSS.
+The site includes smooth navigation, a mobile-friendly design, a beautiful menu section, contact information, and a stylish footer.
 
-Currently, two official plugins are available:
+This project was created to practice real-world UI development, responsive design, and component-based structure in React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Live Demo
 
-## React Compiler
+👉 https://adamabdallah1.github.io/mugs-coffee-website
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📸 Features
 
-## Expanding the ESLint configuration
+✔️ Fully responsive design (mobile, tablet, and desktop)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✔️ Smooth scroll navigation
+
+✔️ Clean and modern UI
+
+✔️ Menu categories: Hot Drinks, Milkshakes, Smoothies
+
+✔️ Contact info and Opening Hours section
+
+✔️ Beautiful Footer section with icons
+
+✔️ Built using reusable React components
+
+✔️ Styled entirely with Tailwind CSS
+
+🛠️ Technologies Used
+Technology	Purpose
+React.js	Frontend UI components
+Tailwind CSS	Styling & responsive design
+React Icons	Icons for UI elements
+Vite	Fast development environment
+GitHub Pages	Deployment
+
+🧾 License
+
+This project is for educational and personal use.
+
+✨ Author
+
+Adam Abdallah
+2025 © All Rights Reserved
