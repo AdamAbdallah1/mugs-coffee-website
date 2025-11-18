@@ -78,6 +78,27 @@ const menuData = [
         price: "$5.0"
       }
     ]
+  },
+  {
+    category: "Frappe",
+    items: [
+      {
+        name: "Caramel Frappe",
+        price: "$5.0"
+      },
+      {
+        name: "White Mocha Frappe",
+        price: "$5.0"
+      },
+      {
+        name: "Dark Mocha Frapper",
+        price: "$5.0"
+      },
+      {
+        name: "Vanilla Frappe",
+        price: "$5.0"
+      }
+    ]
   }
 ];
 
