@@ -72,7 +72,7 @@ const Menu = () => {
             <button
               key={cat.category}
               onClick={() => setSelectedCategory(cat.category)}
-              className={`px-4 py-2 rounded-full font-medium ${
+              className={`px-3 py-2 rounded-full font-medium cursor-pointer ${
                 selectedCategory === cat.category
                   ? "bg-[#a05c29] text-white"
                   : "bg-gray-200 text-gray-800"
