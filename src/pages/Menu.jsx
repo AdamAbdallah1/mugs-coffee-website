@@ -5,19 +5,19 @@ const menuData = [
     items: [
       {
         name: "Espresso",
-        price: "$2",
+        price: "$2.0",
       },
       {
         name: "Double Expresso",
-        price: "$3",
+        price: "$3.0",
       },
       {
         name: "Cappuccino",
-        price: "$4",
+        price: "$4.0",
       },
       {
         name: "Americano",
-        price: "$4",
+        price: "$4.0",
       }
     ]
   },
@@ -26,15 +26,15 @@ const menuData = [
     items: [
       {
         name: "Chocltate",
-        price: "$5",
+        price: "$5.0",
       },
             {
         name: "Strawberry",
-        price: "$5",
+        price: "$5.0",
       },
             {
         name: "Vanilla",
-        price: "$5",
+        price: "$5.0",
       }
       
       
@@ -46,11 +46,36 @@ const menuData = [
     items: [
       {
         name: "Mango",
-        price: "$6",
+        price: "$6.0",
       },
       {
         name: "Strawberry",
-        price: "$6",
+        price: "$6.0",
+      }
+    ]
+  },
+  {
+    category: "Iced Coffee",
+    items: [
+      {
+        name: "Iced Latte",
+        price: "$4.0"
+      },
+      {
+        name: "Flavored Latte",
+        price: "$5.0"
+      },
+      {
+        name: "Americano",
+        price: "$4.0"
+      },
+      {
+        name: "Spanish",
+        price: "$5.0"
+      },
+      {
+        name: "Fresh Vanilla",
+        price: "$5.0"
       }
     ]
   }
