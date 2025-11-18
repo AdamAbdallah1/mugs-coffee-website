@@ -3,7 +3,7 @@ import ButtonBook from '../components/ButtonBook'
 
 const Home = () => {
   return (
-    <section id='home' className='text-white flex flex-col justify-center items-center mt-32 gap-6 relative z-10 px-4'>
+    <section id='home' className='text-white flex flex-col justify-center items-center mt-50 gap-6 relative z-10 px-4'>
         <h1 className='text-4xl sm:text-5xl md:text-6xl font-extrabold text-center max-w-2xl'>
           A Cup of Coffee For Every Mood
         </h1>
