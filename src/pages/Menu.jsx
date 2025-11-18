@@ -92,12 +92,12 @@ const Menu = () => {
     <section id='menu' className='bg-white mt-10 md:mt-20 flex flex-col p-5 justify-center items-center gap-10'>
         <h1 className='text-4xl font-extrabold text-center'>Our Menu</h1>
 
-        <div className='flex gap-4'>
+        <div className='flex gap-4 overflow-x-auto scrollbar-hide w-full max-w-4xl px-2'>
           {menuData.map(cat => (
             <button
               key={cat.category}
               onClick={() => setSelectedCategory(cat.category)}
-              className={`px-3 py-2 rounded-full font-medium cursor-pointer ${
+              className={`whitespace-nowrap px-4 py-2 rounded-full font-medium cursor-pointer ${
                 selectedCategory === cat.category
                   ? "bg-[#a05c29] text-white"
                   : "bg-gray-200 text-gray-800"
