@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+
+
 import Affogato from '../assets/Affogato.jpg'
 import Americano from '../assets/Americano.jpg'
 import BelgianChoclate from '../assets/BelgianChoclate.jpg'
@@ -251,7 +254,6 @@ const menuData = [
   }
 ]
 
-import React, { useState } from 'react';
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState("Hot Drinks");
@@ -281,13 +283,22 @@ const Menu = () => {
         <div className='flex flex-col gap-6 w-full max-w-4xl'>
           {category.items.map(item => (
             <div key={item.name} className='border-b pb-4'>
-              <div className='flex justify-between items-center'>
-                <div className='flex justify-center items-center'>
-                  <img className='w-30' src={item.image} alt="" />
-                  <h2 className='text-2xl font-semibold'>{item.name}</h2>
+              <div className='flex items-center justify-between gap-4'>
+
+                <div className='flex items-center gap-4'>
+                  <img
+                    className='w-20 h-20 object-cover rounded-lg'
+                    src={item.image}
+                    alt={item.name}
+                  />
+                  <h2 className='text-xl font-semibold'>{item.name}</h2>
                 </div>
-                <span className='font-bold'>{item.price}</span>
+
+                <span className='font-bold text-lg whitespace-nowrap'>
+                  {item.price}
+                </span>
               </div>
+
               <p className='text-gray-700 mt-1'>{item.description}</p>
             </div>
           ))}
@@ -297,3 +308,4 @@ const Menu = () => {
 };
 
 export default Menu;
+

@@ -23,7 +23,7 @@ const About = () => {
                 <p className='text-gray-900 text-center md:text-left'>
                     At our café, we believe coffee is more than just a drink — it’s a ritual, a comfort, and an art form. From bean to brew, every cup is crafted to perfection using traditional methods and premium ingredients. Whether you're here for your morning pick-me-up or an afternoon escape, we promise a rich, flavorful experience that captures the true essence of coffee.
                 </p>
-                <button className='bg-[#a05c29] hover:bg-[#9c663c] p-3 cursor-pointer mt-6 w-40 self-center md:self-start'
+                <button className='bg-[#a05c29] text-white hover:bg-[#9c663c] p-3 cursor-pointer mt-6 w-40 self-center md:self-start'
                 onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
                 >
                     CONTACT US
