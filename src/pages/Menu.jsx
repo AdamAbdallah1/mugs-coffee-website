@@ -267,16 +267,17 @@ const Menu = () => {
         <div className='flex gap-4 overflow-x-auto scrollbar-hide w-full max-w-4xl px-2'>
           {menuData.map(cat => (
             <button
-              key={cat.category}
-              onClick={() => setSelectedCategory(cat.category)}
-              className={`whitespace-nowrap px-4 py-2 rounded-full font-medium cursor-pointer ${
-                selectedCategory === cat.category
-                  ? "bg-[#a05c29] text-white"
-                  : "bg-gray-200 text-gray-800"
-              }`}
-            >
-              {cat.category}
-            </button>
+  key={cat.category}
+  onClick={() => setSelectedCategory(cat.category)}
+  className={`whitespace-nowrap px-5 py-2 rounded-full font-medium transition-colors border ${
+    selectedCategory === cat.category
+      ? "bg-[#0F8B8D] text-white border-[#0F8B8D]"
+      : "bg-white text-black border-gray-300 hover:bg-gray-100"
+  }`}
+>
+  {cat.category}
+</button>
+
           ))}
         </div>
 
@@ -299,7 +300,7 @@ const Menu = () => {
                 </span>
               </div>
 
-              <p className='text-gray-700 mt-1'>{item.description}</p>
+              <p className='text-white/70 mt-1'>{item.description}</p>
             </div>
           ))}
         </div>

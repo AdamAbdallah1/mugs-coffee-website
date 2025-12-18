@@ -32,15 +32,20 @@ const Home = () => {
 
       <div className='flex flex-col sm:flex-row gap-4 sm:gap-10 mt-4'>
         <button
-          className='bg-[#a05c29] hover:bg-[#9c663c] p-3 cursor-pointer transition-colors'
-          onClick={() =>
-            document
-              .getElementById('menu')
-              .scrollIntoView({ behavior: 'smooth' })
-          }
-        >
-          VIEW MENU
-        </button>
+  className="
+    bg-[#0F8B8D] 
+    hover:bg-[#0C7476]
+    text-[#F5E6C8]
+    px-6 py-3
+    font-semibold tracking-wide
+    transition-colors
+  "
+  onClick={() =>
+    document.getElementById('menu').scrollIntoView({ behavior: 'smooth' })
+  }
+>
+  VIEW MENU
+</button>
       </div>
     </section>
   )

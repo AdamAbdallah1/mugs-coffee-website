@@ -37,7 +37,7 @@ function App() {
     <div className="App">
             <div
         id="scrollBar"
-        className="fixed top-16 left-0 h-1 bg-[#95613C] w-0 z-50"
+        className="fixed top-16 left-0 h-1 bg-[#0F8B8D] w-0 z-50"
       ></div>
       <Navbar />
 
@@ -68,8 +68,8 @@ function App() {
 
       <button
         id="backToTop"
-        className="hidden fixed bottom-6 right-6 bg-[#95613C] text-white p-3 rounded-full shadow-lg 
-          hover:bg-[#6e340b] hover:scale-105 transition-all duration-300"
+        className="hidden fixed bottom-6 right-6 bg-[#0F8B8D] text-white p-3 rounded-full shadow-lg 
+          hover:bg-[#074b4d] hover:scale-105 transition-all duration-300"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
         <HiArrowUp size={20} />

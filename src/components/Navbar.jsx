@@ -1,45 +1,64 @@
-import React, { useState } from 'react';
-import { CiCoffeeCup } from "react-icons/ci";
-import { HiMenu } from "react-icons/hi"; 
-import { AiOutlineClose } from "react-icons/ai"; 
-import ButtonBook from './ButtonBook';
+import React, { useState } from 'react'
+import { CiCoffeeCup } from "react-icons/ci"
+import { HiMenu } from "react-icons/hi"
+import { AiOutlineClose } from "react-icons/ai"
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <div className='flex items-center justify-between p-4 h-16 text-white bg-black/50 backdrop-blur-md fixed w-full z-50'>
-      
-      <div className='flex items-center gap-2'>
-          <CiCoffeeCup size={32} color='#C69B7B'/>
-          <h1 className='font-extrabold text-xl cursor-pointer'>Mugs Coffee</h1>
+    <header className="fixed top-0 w-full z-50">
+      <div className="flex items-center justify-between h-16 px-6 text-white
+        bg-[#0F8B8D]/90 backdrop-blur-md border-b border-white/10">
+
+        {/* Logo */}
+        <div className="flex items-center gap-2 cursor-pointer">
+          <CiCoffeeCup size={30} className="text-[#F5E6C8]" />
+          <h1 className="font-extrabold text-xl tracking-wide">
+            Mugs Coffee
+          </h1>
+        </div>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex gap-8 font-medium text-sm tracking-wide">
+          {['Home','Menu','Gallery','About','Contact'].map((item) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="relative text-white/90 hover:text-[#F5E6C8] transition-colors"
+            >
+              {item}
+            </a>
+          ))}
+        </nav>
+
+        <button
+          className="md:hidden text-[#F5E6C8]"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <AiOutlineClose size={26}/> : <HiMenu size={26}/>}
+        </button>
       </div>
 
-      <nav className='hidden md:flex gap-6 font-medium'>
-          <a className='hover:text-[#C69B7B]' href="#home">Home</a>
-          <a className='hover:text-[#C69B7B]' href="#menu">Menu</a>
-          <a className='hover:text-[#C69B7B]' href="#gallery">Gallery</a>
-          <a className='hover:text-[#C69B7B]' href="#about">About</a>
-          <a className='hover:text-[#C69B7B]' href="#contact">Contact</a>
-      </nav>
-
-      <div className='flex md:hidden'>
-            <button onClick={() => setMenuOpen(!menuOpen)}>
-                {menuOpen ? <AiOutlineClose size={28}/> : <HiMenu size={28}/>}
-            </button>
-        </div>
-
+      {/* Mobile Menu */}
       {menuOpen && (
-        <div className='absolute top-16 left-0 w-full bg-black/90 flex flex-col items-center gap-4 p-5 md:hidden'>
-          <a className='hover:text-[#C69B7B]' href="#home">Home</a>
-          <a className='hover:text-[#C69B7B]' href="#menu">Menu</a>
-          <a className='hover:text-[#C69B7B]' href="#gallery">Gallery</a>
-          <a className='hover:text-[#C69B7B]' href="#about">About</a>
-          <a className='hover:text-[#C69B7B]' href="#contact">Contact</a>
+        <div className="md:hidden bg-[#0F8B8D]/95 backdrop-blur-md
+          border-t border-white/10 flex flex-col items-center gap-6 py-6">
+
+          {['Home','Menu','Gallery','About','Contact'].map((item) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              onClick={() => setMenuOpen(false)}
+              className="text-lg text-white/90 hover:text-[#F5E6C8] transition-colors"
+            >
+              {item}
+            </a>
+          ))}
         </div>
       )}
-    </div>
-  );
+    </header>
+  )
 }
 
-export default Navbar;
+export default Navbar
