@@ -6,6 +6,7 @@ import Contact from './pages/Contact'
 import Footer from './components/Footer'
 import { useEffect } from "react";
 import { HiArrowUp } from "react-icons/hi";
+import Gallery from './pages/Gallery'
 
 function App() {
 
@@ -55,6 +56,10 @@ function App() {
 
       <section id="menu" className="w-full bg-white min-h-screen">
         <Menu />
+      </section>
+
+      <section id='gallery'>
+        <Gallery />
       </section>
 
       <section id="contact" className="w-full bg-white min-h-screen">
