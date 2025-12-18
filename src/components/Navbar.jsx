@@ -18,6 +18,7 @@ const Navbar = () => {
       <nav className='hidden md:flex gap-6 font-medium'>
           <a className='hover:text-[#C69B7B]' href="#home">Home</a>
           <a className='hover:text-[#C69B7B]' href="#menu">Menu</a>
+          <a className='hover:text-[#C69B7B]' href="#gallery">Gallery</a>
           <a className='hover:text-[#C69B7B]' href="#about">About</a>
           <a className='hover:text-[#C69B7B]' href="#contact">Contact</a>
       </nav>
@@ -32,6 +33,7 @@ const Navbar = () => {
         <div className='absolute top-16 left-0 w-full bg-black/90 flex flex-col items-center gap-4 p-5 md:hidden'>
           <a className='hover:text-[#C69B7B]' href="#home">Home</a>
           <a className='hover:text-[#C69B7B]' href="#menu">Menu</a>
+          <a className='hover:text-[#C69B7B]' href="#gallery">Gallery</a>
           <a className='hover:text-[#C69B7B]' href="#about">About</a>
           <a className='hover:text-[#C69B7B]' href="#contact">Contact</a>
         </div>
