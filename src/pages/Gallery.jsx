@@ -1,10 +1,12 @@
-import React from 'react';
-import Gallery1 from '../assets/gallery1.png';
-import Gallery2 from '../assets/gallery2.png';
-import Gallery3 from '../assets/gallery3.png';
-import Gallery4 from '../assets/gallery4.png';
-import Gallery5 from '../assets/gallery5.png';
-import Gallery6 from '../assets/gallery6.png';
+import React from 'react'
+import Gallery1 from '../assets/gallery1.png'
+import Gallery2 from '../assets/gallery2.png'
+import Gallery3 from '../assets/gallery3.png'
+import Gallery4 from '../assets/gallery4.png'
+import Gallery5 from '../assets/gallery5.png'
+import Gallery6 from '../assets/gallery6.png'
+import Gallery7 from '../assets/gallery7.png'
+import Gallery8 from '../assets/gallery8.png'
 
 
 const Gallery = () => {
@@ -14,53 +16,43 @@ const Gallery = () => {
     { src: Gallery3, alt: 'Coffee brewing process' },
     { src: Gallery4, alt: 'Perfect cortado with latte art' },
     { src: Gallery5, alt: 'Specialty coffee preparation' },
-    { src: Gallery6, alt: 'Premium coffee experience' }
-  ];
+    { src: Gallery6, alt: 'Specialty coffee preparation' },
+    { src: Gallery7, alt: 'Specialty coffee preparation' },
+    { src: Gallery8, alt: 'Premium coffee experience' }
+  ]
 
   return (
-    <section id="gallery" className="section-padding-small" style={{ background: 'var(--bg-primary)' }}>
-      <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-          <h2 className="hero-medium" style={{ marginBottom: '16px' }}>Gallery</h2>
-          <p className="body-large" style={{ color: 'var(--text-secondary)' }}>
-            A glimpse into our craft
-          </p>
+    <section id="gallery" className="px-4 py-20 text-black mt-20">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-14">
+          <h1 className='text-4xl font-extrabold text-center text-black'>Gallery</h1>
         </div>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-          gap: '24px'
-        }}>
+        <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
           {galleryImages.map((image, index) => (
-            <div 
+            <div
               key={index}
-              style={{
-                overflow: 'hidden',
-                border: '1px solid var(--border-light)',
-                aspectRatio: '4/5',
-                cursor: 'pointer'
-              }}
-              className="hover-lift"
+              className="overflow-hidden rounded-xl border border-white/10 group cursor-pointer"
             >
-              <img 
+              <img
                 src={image.src}
                 alt={image.alt}
-                style={{ 
-                  width: '100%', 
-                  height: '100%', 
-                  objectFit: 'cover',
-                  transition: 'transform 0.3s ease'
-                }}
-                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                className="
+                  w-full 
+                  h-64 
+                  object-cover 
+                  transition-transform 
+                  duration-300 
+                  ease-out 
+                  group-hover:scale-105
+                "
               />
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Gallery;
+export default Gallery
