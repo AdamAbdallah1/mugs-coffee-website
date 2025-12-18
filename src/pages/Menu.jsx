@@ -261,49 +261,51 @@ const Menu = () => {
   const category = menuData.find(cat => cat.category === selectedCategory);
 
   return (
-    <section id='menu' className='bg-white mt-10 md:mt-20 flex flex-col p-5 justify-center items-center gap-10'>
-        <h1 className='text-4xl font-extrabold text-center'>Our Menu</h1>
+    <section
+      id="menu"
+      className="bg-white mt-10 md:mt-20 flex flex-col p-5 justify-center items-center gap-10"
+    >
+      <h1 className="text-4xl font-extrabold text-center">Our Menu</h1>
 
-        <div className='flex gap-4 overflow-x-auto scrollbar-hide w-full max-w-4xl px-2'>
-          {menuData.map(cat => (
-            <button
-  key={cat.category}
-  onClick={() => setSelectedCategory(cat.category)}
-  className={`whitespace-nowrap px-5 py-2 rounded-full font-medium transition-colors border ${
-    selectedCategory === cat.category
-      ? "bg-[#0F8B8D] text-white border-[#0F8B8D]"
-      : "bg-white text-black border-gray-300 hover:bg-gray-100"
-  }`}
->
-  {cat.category}
-</button>
+      <div className="flex gap-4 overflow-x-auto scrollbar-hide w-full max-w-4xl px-2">
+        {menuData.map((cat) => (
+          <button
+            key={cat.category}
+            onClick={() => setSelectedCategory(cat.category)}
+            className={`whitespace-nowrap px-4 py-3 rounded-full font-medium transition-colors mt-6 
+              border ${
+                selectedCategory === cat.category
+                  ? "bg-[#0F8B8D] text-white border-[#0F8B8D]"
+                  : "bg-white text-[#0F8B8D] border-[#0F8B8D] hover:bg-[#0F8B8D] hover:text-white"
+              }`}
+          >
+            {cat.category}
+          </button>
+        ))}
+      </div>
 
-          ))}
-        </div>
-
-        <div className='flex flex-col gap-6 w-full max-w-4xl'>
-          {category.items.map(item => (
-            <div key={item.name} className='border-b pb-4'>
-              <div className='flex items-center justify-between gap-4'>
-
-                <div className='flex items-center gap-4'>
-                  <img
-                    className='w-20 h-20 object-cover rounded-lg'
-                    src={item.image}
-                    alt={item.name}
-                  />
-                  <h2 className='text-xl font-semibold'>{item.name}</h2>
-                </div>
-
-                <span className='font-bold text-lg whitespace-nowrap'>
-                  {item.price}
-                </span>
+      <div className="flex flex-col gap-6 w-full max-w-4xl">
+        {category.items.map((item) => (
+          <div key={item.name} className="border-b pb-4">
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <img
+                  className="w-20 h-20 object-cover rounded-lg"
+                  src={item.image}
+                  alt={item.name}
+                />
+                <h2 className="text-xl font-semibold">{item.name}</h2>
               </div>
 
-              <p className='text-white/70 mt-1'>{item.description}</p>
+              <span className="font-bold text-lg whitespace-nowrap">
+                {item.price}
+              </span>
             </div>
-          ))}
-        </div>
+
+            <p className="text-white/70 mt-1">{item.description}</p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

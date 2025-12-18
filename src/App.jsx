@@ -44,7 +44,7 @@ function App() {
 
       <section
         id="home"
-        className="relative w-full min-h-screen bg-[url('/bg-coffee3.jpg')] bg-cover bg-center pt-16"
+        className="relative w-full min-h-screen bg-[url('/background.jpg')] bg-cover bg-center pt-16"
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <Home className="relative z-10" />
