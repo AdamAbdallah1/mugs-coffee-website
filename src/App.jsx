@@ -50,12 +50,12 @@ function App() {
         <Home className="relative z-10" />
       </section>
 
-      <section id="about" className="w-full bg-white min-h-screen">
-        <About />
+       <section id="menu" className="w-full bg-white min-h-screen">
+        <Menu />
       </section>
 
-      <section id="menu" className="w-full bg-white min-h-screen">
-        <Menu />
+      <section id="about" className="w-full bg-white min-h-screen">
+        <About />
       </section>
 
       <section id='gallery'>

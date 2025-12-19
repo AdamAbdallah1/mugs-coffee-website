@@ -6,8 +6,9 @@ const About = () => {
       id='about'
       className='bg-white mt-20 flex flex-col justify-center items-center p-8 gap-6'
     >
+              <h1 className='text-4xl font-extrabold mb-4 text-center'>About Us</h1>
+
       <div className="w-full max-w-3xl p-8 rounded-2xl border border-gray-200 shadow-lg hover:border-[#0F8B8D] transition-colors text-left">
-        <h1 className='text-4xl font-extrabold mb-4 text-center'>About Us</h1>
 
         <h2 className='text-2xl font-bold mb-2 text-center'>
           Coffee The Way It Was Meant To Be.

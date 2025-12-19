@@ -270,21 +270,21 @@ const Menu = () => {
       <div className="flex gap-4 overflow-x-auto scrollbar-hide w-full max-w-4xl px-2">
         {menuData.map((cat) => (
           <button
-            key={cat.category}
-            onClick={() => setSelectedCategory(cat.category)}
-            className={`whitespace-nowrap px-4 py-3 rounded-full font-medium transition-colors mt-6 
-              border ${
-                selectedCategory === cat.category
-                  ? "bg-[#0F8B8D] text-white border-[#0F8B8D]"
-                  : "bg-white text-[#0F8B8D] border-[#0F8B8D] hover:bg-[#0F8B8D] hover:text-white"
-              }`}
-          >
-            {cat.category}
-          </button>
+  key={cat.category}
+  onClick={() => setSelectedCategory(cat.category)}
+  className={`whitespace-nowrap px-4 py-3 rounded-full font-medium transition-all duration-300 mt-6 
+    border ${
+      selectedCategory === cat.category
+        ? "bg-[#0F8B8D] text-white border-[#0F8B8D] scale-90" // smaller when selected
+        : "bg-white text-[#0F8B8D] border-[#0F8B8D] hover:bg-[#0F8B8D] hover:text-white scale-100"
+    }`}
+>
+  {cat.category}
+</button>
         ))}
       </div>
 
-      <div className="flex flex-col gap-6 w-full max-w-4xl">
+      <div className="flex flex-col gap-6 w-full max-w-3xl">
         {category.items.map((item) => (
           <div key={item.name} className="border-b pb-4">
             <div className="flex items-center justify-between gap-4">
