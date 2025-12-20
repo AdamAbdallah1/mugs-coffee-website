@@ -79,6 +79,8 @@ import VanillaMilkshake from '../assets/VanillaMilkshake.jpg'
 import WhiteMochaFrapper from '../assets/WhiteMochaFrapper.jpg'
 import WhiteMocha from '../assets/WhiteMocha.jpg'
 import LabnehBaladeyeh from '../assets/LabnehBaladeyeh.jpg'
+import Confetti from 'react-confetti';
+
 
 const menuData = [
   {
@@ -265,6 +267,7 @@ const Menu = () => {
       id="menu"
       className="bg-white mt-10 md:mt-20 flex flex-col p-5 justify-center items-center gap-10"
     >
+      
       <h1 className="text-4xl font-extrabold text-center">Our Menu</h1>
 
       <div className="flex gap-4 overflow-x-auto scrollbar-hide w-full max-w-4xl px-2">
